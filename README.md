@@ -10,6 +10,7 @@
 - Uygulamayı çalıştırmadan önce PostgreSQL de rentAIha adında bir veritabanı oluşturmanız gerekli.
 - Daha sonra Virtual enviroment oluşturunuz ve dosya içerisindeki gereklilikleri yükleyiniz.
 - Ve uygulamayı çalıştıramaya hazırsınız.
+- Postman collection dosyasını uygulamanızda içe aktararak gerekli endpointlere erişebilir ve kullanabilirsiniz.
 
 ### How It Works
 Projenin ana fonksiyonaliteleri arasında kullanıcı üyelik ve giriş ekranı, İHA yönetimi (ekleme, silme, güncelleme, listeleme, kiralama), üyelerin İHA kiralama kayıtları, kiralanan İHA yönetimi özellikleri bulunmaktadır.
