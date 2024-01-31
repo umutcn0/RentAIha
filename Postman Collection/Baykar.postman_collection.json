@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "c25f7038-8d7e-4c23-a08b-53608b6b789c",
+		"name": "Baykar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26379967"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LoginHandler",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"umut@hotmail.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"umut@hotmail.com\",\n    \"password\": \"12345\",\n    \"password_confirm\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rent",
+			"item": [
+				{
+					"name": "RentOperations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rent/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rent",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RentOperations NEW",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selected_iha_id\": 1,\n    \"user_mail\": \"umut@hotmail.com\", \n    \"start_date\": \"2024-01-30\",\n    \"end_date\": \"2024-02-07\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rent/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rent",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RentOperations UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selected_iha_id\": 1,\n    \"user_mail\": \"umut@hotmail.com\", \n    \"start_date\": \"2024-02-03\",\n    \"end_date\": \"2024-03-07\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rent/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rent",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RentOperations DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selected_iha_id\": 1,\n    \"user_mail\": \"umut@hotmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rent/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rent",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Iha Operations",
+			"item": [
+				{
+					"name": "IhaHandler GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/iha/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IhaHandler NEW",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\": \"Brand\",\n    \"model\": \"SİHA-1\", \n    \"weight\": \"100\",\n    \"category\": \"Military\",\n    \"year\": \"2024\",\n    \"price\": 300000\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/iha/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IhaHandler UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selected_iha_id\": 1,\n    \"brand\": \"Brand\",\n    \"model\": \"SİHA-1\", \n    \"weight\": \"100\",\n    \"category\": \"Military\",\n    \"year\": \"2024\",\n    \"price\": 300000\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/iha/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IhaHandler UPDATE Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selected_iha_id\": 1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/iha/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iha",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
