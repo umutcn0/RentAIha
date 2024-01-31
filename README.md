@@ -1,5 +1,3 @@
-# Rent A IHA App
-
 # Getting Started
 İHA Kiralama Projesi, İnsansız Hava Araçları'nın (İHA) kiralama işlemlerini yöneten bir web uygulamasıdır. Proje, Python dilinde Django web framework'ü kullanılarak geliştirilmiştir.
 
