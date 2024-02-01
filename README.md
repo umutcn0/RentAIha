@@ -6,21 +6,23 @@
 - PostgreSQL
 - Django
 
-### Installing
+### Installation
 - Uygulamayı çalıştırmadan önce PostgreSQL üzerinde bir veritabanı oluşturmanız gerekli.
 - Daha sonra Virtual enviroment oluşturunuz ve dosya içerisindeki gereklilikleri yükleyiniz.
-- rentAIha dosyası içerisine .env dosyası oluturmalı ve aşağıdaki verileri yazmalısınız:
-  SECRET_KEY=YOUR_SECRET_KEY
-  DB_NAME=YOUR_DB_NAME
-  DB_USER=YOUR_DB_USER
-  DB_PASSWORD=YOUR_DB_PASSWORD
-  DB_HOST=localhost
-  DB_PORT=5432
+- "rentAIha" dosyası içerisine .env dosyası oluturmalı ve aşağıdaki verileri yazmalısınız:
+    ```python
+SECRET_KEY=YOUR_SECRET_KEY
+DB_NAME=YOUR_DB_NAME
+DB_USER=YOUR_DB_USER
+DB_PASSWORD=YOUR_DB_PASSWORD
+DB_HOST=localhost
+DB_PORT=5432
+```
 - Ve uygulamayı çalıştıramaya hazırsınız.
 
 ### Notes
-- Postman collection dosyasını uygulamanızda içe aktararak gerekli endpointlere erişebilir ve kullanabilirsiniz.
-- Uygulama içerisinde "manage.py test" yazarak uygulamada yazılı olan testleri kullanabilirsiniz.
+- ** Postman collection dosyasını uygulamanızda içe aktararak gerekli endpointlere erişebilir ve kullanabilirsiniz.**
+- ** Uygulama içerisinde "manage.py test" yazarak uygulamada yazılı olan testleri kullanabilirsiniz.**
 
 ### How It Works
 Projenin ana fonksiyonaliteleri arasında kullanıcı üyelik ve giriş ekranı, İHA yönetimi (ekleme, silme, güncelleme, listeleme, kiralama), üyelerin İHA kiralama kayıtları, kiralanan İHA yönetimi özellikleri bulunmaktadır.
