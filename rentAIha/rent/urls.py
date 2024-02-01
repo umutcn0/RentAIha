@@ -5,7 +5,7 @@ from . import views
 app_name = 'rentAIha'
 
 urlpatterns = [
-    path('operation/', csrf_exempt(views.RentOperations.as_view()), name='rentOparations'),
+    path('operation/', csrf_exempt(views.RentOperations.as_view()), name='rentOperations'),
     path('', views.dashboard, name='loginPage'),
     path('history/', views.history, name='history'),
 ]

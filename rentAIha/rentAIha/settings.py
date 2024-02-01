@@ -7,7 +7,7 @@ environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+DEBUG = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -16,12 +16,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*qv2^i-k=izqaq=d-jak18)!t3fwr7tc7o8d9ny4k6d(=+%e_7'
 CSRF_COOKIE_SECURE = True  # HTTPS üzerinden çerez gönderme
 CSRF_COOKIE_HTTPONLY = True  # JavaScript aracılığıyla çereze erişimi engelleme
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG", default=0))
-
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-
 
 # Application definition
 
@@ -34,6 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'database.apps.DatabaseConfig',
+    'iha',
+    'login',
+    'rent',
 ]
 
 TEMPLATES = [

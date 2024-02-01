@@ -1,7 +1,6 @@
 import json
 from django.test import TestCase
 from django.urls import reverse
-from login.views import RegisterHandler, LoginHandler
 from database.models import User
 
 class LoginHandlerTest(TestCase):
@@ -11,12 +10,14 @@ class LoginHandlerTest(TestCase):
             'name': 'John Doe',
             'email': 'john.doe@example.com',
             'password': 'securepassword',
+            'is_active': True,
+            'is_admin': False,
         }
         User.objects.create(**self.user_data)
 
     def test_login_user_success(self):
         # Başarılı giriş senaryosu
-        url = reverse('login')
+        url = reverse('userLogin')
         data = {
             'email': 'john.doe@example.com',
             'password': 'securepassword',
@@ -31,7 +32,7 @@ class LoginHandlerTest(TestCase):
 
     def test_login_user_missing_fields(self):
         # Eksik alanlarla giriş senaryosu
-        url = reverse('login')  
+        url = reverse('userLogin')  
         data = {
             'email': 'john.doe@example.com',
             'password': '',  # Eksik alan
@@ -46,7 +47,7 @@ class LoginHandlerTest(TestCase):
 
     def test_login_user_incorrect_credentials(self):
         # Yanlış kimlik bilgileriyle giriş senaryosu
-        url = reverse('login')  
+        url = reverse('userLogin')  
         data = {
             'email': 'john.doe@example.com',
             'password': 'wrongpassword',  # Yanlış şifre
@@ -61,7 +62,7 @@ class LoginHandlerTest(TestCase):
 
     def test_login_user_set_cookie(self):
         # Giriş yapıldığında cookie'nin doğru bir şekilde ayarlanması senaryosu
-        url = reverse('login')  
+        url = reverse('userLogin')  
         data = {
             'email': 'john.doe@example.com',
             'password': 'securepassword',
@@ -82,7 +83,7 @@ class LoginHandlerTest(TestCase):
 class RegisterHandlerTest(TestCase):
     def test_register_user_success(self):
         # Örnek bir başarılı kayıt senaryosu
-        url = reverse('register')
+        url = reverse('userRegister')
         data = {
             'name': 'John Doe',
             'email': 'john.doe@example.com',
@@ -99,7 +100,7 @@ class RegisterHandlerTest(TestCase):
 
     def test_register_user_missing_fields(self):
         # Zorunlu alanların eksik olduğu senaryo
-        url = reverse('register')  
+        url = reverse('userRegister')  
         data = {
             'name': 'John Doe',
             'email': '',  # Eksik alan
@@ -116,7 +117,7 @@ class RegisterHandlerTest(TestCase):
 
     def test_register_user_existing_user(self):
         # Var olan bir kullanıcıyla kayıt senaryosu
-        url = reverse('register')  
+        url = reverse('userRegister')  
         data = {
             'name': 'John Doe',
             'email': 'existing.user@example.com',
@@ -136,7 +137,7 @@ class RegisterHandlerTest(TestCase):
 
     def test_register_user_weak_password(self):
         # Zayıf bir şifre kullanılarak kayıt senaryosu
-        url = reverse('register')  
+        url = reverse('userRegister')  
         data = {
             'name': 'John Doe',
             'email': 'john.doe@example.com',
