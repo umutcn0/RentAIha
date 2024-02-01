@@ -22,8 +22,8 @@ DB_PORT=5432
 - Ve uygulamayı çalıştıramaya hazırsınız.
 
 ### Notes
-- ** Postman collection dosyasını uygulamanızda içe aktararak gerekli endpointlere erişebilir ve kullanabilirsiniz.**
-- ** Uygulama içerisinde "manage.py test" yazarak uygulamada yazılı olan testleri kullanabilirsiniz.**
+- **Postman collection dosyasını uygulamanızda içe aktararak gerekli endpointlere erişebilir ve kullanabilirsiniz.**
+- **Uygulama içerisinde "manage.py test" yazarak uygulamada yazılı olan testleri kullanabilirsiniz.**
 
 ### How It Works
 Projenin ana fonksiyonaliteleri arasında kullanıcı üyelik ve giriş ekranı, İHA yönetimi (ekleme, silme, güncelleme, listeleme, kiralama), üyelerin İHA kiralama kayıtları, kiralanan İHA yönetimi özellikleri bulunmaktadır.
