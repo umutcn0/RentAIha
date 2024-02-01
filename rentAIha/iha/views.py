@@ -95,5 +95,6 @@ class IhaHandler(View):
             response['message'] = 'IHA not found'
             return JsonResponse(response)
 
+# Render the IHA page.
 def iha(request):
     return render(request, 'dashboard/iha.html')

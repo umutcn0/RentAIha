@@ -1,5 +1,6 @@
 from django.db import models
 
+# User model 
 class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
@@ -7,6 +8,7 @@ class User(models.Model):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
+# IHA model
 class IHA(models.Model):
     brand = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
@@ -18,6 +20,7 @@ class IHA(models.Model):
     is_available = models.BooleanField(default=True)
     is_rented = models.BooleanField(default=False)
 
+# Rent model
 class Rent(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id')
     iha_id = models.ForeignKey(IHA, on_delete=models.CASCADE, db_column='iha_id')

@@ -111,8 +111,10 @@ class RentOperations(View):
             response['message'] = 'Renting option not found'
             return JsonResponse(response)
         
+# Rentable IHA page
 def dashboard(request):
     return render(request, 'dashboard/dashboard.html')
 
+# Rent history page
 def history(request):
     return render(request, 'dashboard/history.html')

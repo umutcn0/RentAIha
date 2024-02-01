@@ -8,6 +8,7 @@ from common import password_policy
 from django.shortcuts import render
 
 class LoginHandler(View):
+    # Login user.
     def post(self, request):
         data = json.loads(request.body)
         email = data.get('email')
@@ -30,6 +31,7 @@ class LoginHandler(View):
         return response
     
 class RegisterHandler(View):
+    # Register user.
     def post(self, request):
         data = json.loads(request.body)
         name = data.get('name')
@@ -57,8 +59,10 @@ class RegisterHandler(View):
         response['message'] = 'User created successfully'
         return JsonResponse(response)
 
+# Login page render
 def loginPage(request):
     return render(request, 'login/sign-in.html')
 
+# Register page render
 def register(request):
     return render(request, 'login/sign-up.html')
