@@ -10,7 +10,8 @@
 - Uygulamayı çalıştırmadan önce PostgreSQL üzerinde bir veritabanı oluşturmanız gerekli.
 - Daha sonra Virtual enviroment oluşturunuz ve dosya içerisindeki gereklilikleri yükleyiniz.
 - "rentAIha" dosyası içerisine .env dosyası oluturmalı ve aşağıdaki verileri yazmalısınız:
-    ```python
+
+```python
 SECRET_KEY=YOUR_SECRET_KEY
 DB_NAME=YOUR_DB_NAME
 DB_USER=YOUR_DB_USER
